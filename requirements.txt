@@ -1,0 +1,11 @@
+elasticsearch==8.11.1
+groq
+notebook==7.1.2
+openai
+pandas
+python-dotenv
+requests
+scikit-learn
+torch
+transformers
+tdqm
