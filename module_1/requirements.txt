@@ -1,0 +1,11 @@
+elasticsearch==8.11.1
+groqgroq==0.28.0
+notebook==7.1.2
+openai==1.86.0
+pandas==2.3.0
+python-dotenv==1.1.0
+requests==2.32.4
+scikit-learn==1.7.0
+torch==2.7.1
+transformers==4.52.4
+tdqm==4.67.1
