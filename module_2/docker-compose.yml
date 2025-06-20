@@ -1,0 +1,27 @@
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile.jupyter
+    container_name: llm_jupyter_lab
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - PYTHONPATH=/usr/src/app
+    command: ["jupyter", "lab", "--no-browser", "--allow-root", "--ip=0.0.0.0", "--NotebookApp.token=''", "--NotebookApp.password=''"]
+    depends_on:
+      - qdrant
+
+  qdrant:
+    image: qdrant/qdrant
+    container_name: llm_qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_storage:/dqdrant/storage
+
+volumes:
+  qdrant_storage: {} #default configuration

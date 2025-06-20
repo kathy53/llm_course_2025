@@ -1,0 +1,6 @@
+groq==0.28.0
+notebook==7.4.3
+python-dotenv==1.1.0
+qdrant-client[fastembed]>=1.14.2
+requests==2.32.4
+openai==1.86.0
